@@ -1,17 +1,17 @@
 FROM docker.io/tiredofit/nginx:alpine-3.16
-LABEL maintainer="Dave Conroy (github.com/tiredofit)"
+LABEL maintainer="Grzegorz Sterniczuk docker@sternicz.uk"
 
 ENV BACKUPPC_VERSION=4.4.0 \
     BACKUPPC_XS_VERSION=0.62 \
     PAR2_VERSION=v0.8.0 \
-    RSYNC_BPC_VERSION=3.1.3.0 \
+    RSYNC_BPC_VERSION=3.1.2.1 \
     NGINX_ENABLE_CREATE_SAMPLE_HTML=FALSE \
     NGINX_USER=backuppc \
     NGINX_GROUP=backuppc \
     NGINX_SITE_ENABLED=backuppc \
     CONTAINER_ENABLE_MESSAGING=TRUE \
-    IMAGE_NAME="tiredofit/backuppc" \
-    IMAGE_REPO_URL="https://github.com/tiredofit/docker-backuppc/"
+    IMAGE_NAME="dzikus99/backuppc" \
+    IMAGE_REPO_URL="https://github.com/dzikus/docker-backuppc/"
 
 RUN source /assets/functions/00-container && \
     set -x && \
